@@ -25,8 +25,12 @@ export default function Hero() {
       {/* Conteúdo Hero */}
       <div className="relative z-20 w-full flex items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
+        {/* Nome do Personal */}
+        <p className="text-4xl md:text-6xl font-black text-white mb-16">
+           Treinador Federado Rodrigo Salgueiro
+        </p>
         {/* Subtitle */}
-        <p className="text-accent text-sm md:text-base font-semibold mb-4 uppercase tracking-widest">
+        <p className="text-accent text-sm md:text-base font-semibold mb-2 uppercase tracking-widest">
           Transformação Garantida ou Seu Dinheiro de Volta!
         </p>
 

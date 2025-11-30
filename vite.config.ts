@@ -8,8 +8,8 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
-export default defineConfig({
-  base: "/consultoria_treinos/",
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/consultoria_treinos/" : "/",
   plugins,
   resolve: {
     alias: {
@@ -42,4 +42,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));

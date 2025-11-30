@@ -28,10 +28,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="w-full px-8 py-10 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-accent">
+        <div className="flex flex-col">
+          <h1 className="text-xl font-bold text-accent">
             Consultoria<span className="text-foreground">Fit</span>
           </h1>
         </div>
@@ -42,7 +42,7 @@ export default function Header() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-foreground hover:text-accent transition-colors duration-200 font-medium text-sm"
+                className="text-foreground hover:text-accent transition-colors duration-200 font-bold text-lg"
               >
                 {link.label}
               </a>
@@ -56,7 +56,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             {/* Ícone Perfil */}
             <button
-              className="p-2 hover:bg-secondary rounded-lg transition-colors duration-200"
+              className="p-2 rounded-lg transition-colors duration-200"
               aria-label="Meu perfil"
             >
               <User size={24} className="text-accent" />
@@ -64,8 +64,8 @@ export default function Header() {
 
             {/* Botão Entrar */}
             <a
-              href="#login"
-              className="px-4 py-2 text-accent border-2 border-accent rounded-lg hover:bg-accent hover:text-primary-foreground transition-all duration-200 font-semibold text-sm"
+              href="/login"
+              className="px-4 py-2 text-accent border-2 border-accent rounded-lg hover:bg-accent hover:text-primary-foreground transition-all duration-200 font-semibold text-base"
             >
               Entrar
             </a>
@@ -100,7 +100,7 @@ export default function Header() {
       {/* Menu Mobile */}
       {isMenuOpen && (
         <div className="md:hidden bg-card border-t border-border">
-          <ul className="container mx-auto px-4 py-4 flex flex-col gap-4">
+          <ul className="px-8 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
