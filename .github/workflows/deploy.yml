@@ -29,8 +29,10 @@ jobs:
       - name: Build
         run: pnpm run build:client
 
+      - name: Create .nojekyll file
+        run: touch ./dist/public/.nojekyll
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
+          folder: dist/public
