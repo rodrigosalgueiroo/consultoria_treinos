@@ -12,7 +12,7 @@ import Shop from "./pages/Shop";
 
 function Router() {
   return (
-    <Switch>
+    <Switch base="/consultoria_treinos/">
       <Route path="/" component={Home} />
       <Route path="/loja" component={Shop} />
       <Route path="/auth" component={Auth} />
